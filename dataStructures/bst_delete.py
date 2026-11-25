@@ -45,7 +45,7 @@ class BinarySearchTree:
             successor=self.get_successor(rt)
             rt.data=successor.data
             rt.right=self.del_node(rt.right,successor.data)
-            return rt
+        return rt
     def get_successor(self,temp):
         temp=temp.right
         while temp.left is not None :
