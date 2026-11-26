@@ -46,6 +46,7 @@ class BinarySearchTree:
         arr=[]   #for keeping all nodes level wise
 
         cnt=0  #for counting visited nodes
+        # for getting number of level on which the nodes are present
         level=0  
         
         arr.append(rt)
@@ -64,7 +65,7 @@ class BinarySearchTree:
                 if temp.right:
                     arr.append(temp.right) 
             level+=1           
-
+        print("\nHeight of the tree is :",level)
    
 
 BST=BinarySearchTree()
@@ -79,4 +80,5 @@ BST.insert(Node(500))
 
 print("level order")
 BST.level_order(BST.root)
+
 
