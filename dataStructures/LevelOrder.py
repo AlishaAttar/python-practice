@@ -37,12 +37,16 @@ class BinarySearchTree:
             self.inorder(temp.left)  
             print(temp.data,end=" ")
             self.inorder(temp.right)
+
+             
     def level_order(self,rt):
         if rt is None:
             print("BST is empty")
             return
-        arr=[]
+        arr=[]   #for keeping all nodes level wise
+
         cnt=0  #for counting visited nodes
+        
         arr.append(rt)
         while cnt<len(arr):
             temp=arr[cnt]
